@@ -16,7 +16,11 @@ export const Hero = () => {
     <VStack>
       <Box>
         <Container maxW="container.xl" padding={8}>
-          <Grid templateColumns="repeat(2, 1fr)" gap={30} alignItems="center">
+          <Grid
+            templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
+            gap={30}
+            alignItems="center"
+          >
             <Flex
               flexDirection="column"
               alignItems="flex-start"

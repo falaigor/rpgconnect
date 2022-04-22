@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { RoleplayTableItem } from "./RoleplayTableItem";
 
 export const RoleplayTable = () => {
   return (
@@ -26,20 +27,22 @@ export const RoleplayTable = () => {
           </Text>
         </Flex>
         <Container maxW="container.xl" padding={8}>
-          <Grid templateColumns="repeat(3, 1fr)" gap={30} alignItems="center">
-            <Flex
-              flexDirection="column"
-              alignItems="flex-start"
-              justifyContent="space-between"
-            >
-              <Heading>
-                A rede social de <strong>quem curte RPG</strong>.
-              </Heading>
-              <Text>
-                Pra você que é mestre, jogador ou organizador de eventos de RPG.
-                Crie ou encontre mesas, conecte-se com novas pessoas.
-              </Text>
-            </Flex>
+          <Grid
+            templateColumns={[
+              "repeat(1, 1fr)",
+              null,
+              "repeat(2, 1fr)",
+              "repeat(3, 1fr)",
+            ]}
+            gap={30}
+            alignItems="center"
+          >
+            <RoleplayTableItem />
+            <RoleplayTableItem />
+            <RoleplayTableItem />
+            <RoleplayTableItem />
+            <RoleplayTableItem />
+            <RoleplayTableItem />
           </Grid>
         </Container>
       </Box>
